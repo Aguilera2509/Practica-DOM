@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios DOM</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <!--Código de Javascript (Manera ineficiente, mejorar al aprender más)-->
+    <script src="Codex-js/reloj.js"></script>
+    <script src="Codex-js/eventos-teclado.js"></script>
+    <script src="Codex-js/Countdown.js"></script>
+    <script src="Codex-js/scrollTop.js" ></script>
+    
+    
+    <!--Vinculo de Bootstrap, hoja de estilo e ícono-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Ícono/Icon-JavaScrpit.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.css">
+
+</head>
+<body id="cuerpo">
+
+    <header class="titulo" id="home">
+        <h1 class="encabezado" data-dark>Ejercicios del DOM</h1>
+    </header>
+
+<div class="body-page">   
+    <section id="seccion-1" class="body-pages">
+        <h2 data-dark>Reloj Digital y Alarma Sonora</h2>
+
+        <p id="time" data-dark></p>
+        <p id="date" data-dark></p>
+
+        <button type="button" id="start-Reloj" onclick="comenzar()" class="btn btn-success">Inicio de Tiempo</button>
+        <button type="button" onclick="finalizar()" class="btn btn-success">Detener Tiempo</button>
+        <button type="button" id="start-Alarma" onclick="sonarAlarma()" class="btn btn-success">Sonar Alarma</button>
+        <button type="button" onclick="detenerAlarma()" class="btn btn-success">Detener alarma</button>
+
+    </section>
+
+    <section id="seccion-2" class="body-pages">
+        <h2 data-dark>Eventos por Teclado</h2>
+
+        <div class="entorno">
+            <div class="ball">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="seccion-3" class="body-pages">
+        <h2 data-dark>Cuenta Regresiva</h2>
+    
+        <h3 id="countdown" data-dark></h3>
+
+    </section>
+    
+    <section id="seccion-4" class="body-pages">
+        <h2 data-dark>Responsive con JavaScript</h2>
+    
+    
+    </section>
+    
+    <section  id="seccion-5" class="body-pages">
+        <h2 data-dark>Responsive Tester</h2>
+    
+    
+    </section>
+</div>
+
+    <a href="#home">
+        <button class="scroll-top-btn" id="visible">&#8593</button>
+    </a>
+
+ <button type="button" class="modo-oscuro" id="oscuro">🌙</button>
+
+
+ <button class="hamburger hamburger--emphatic" type="button" id="btn-activator">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  
+  <aside class="panel" id="secciones">
+      <nav class="menu">
+          <a href="#seccion-1">Reloj Digital y Alarma Sonora</a>
+          <a href="#seccion-2">Eventos del Teclado</a>
+          <a href="#seccion-3">Cuenta Regresiva</a>
+          <a href="#seccion-4">Responsive con JavaScript</a>
+          <a href="#seccion-5">Responsive Tester</a>
+      </nav>
+  </aside>
+
+</body>
+</html>
