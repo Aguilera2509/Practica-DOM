@@ -73,8 +73,11 @@ document.addEventListener("click",(e) =>{
 document.addEventListener("DOMContentLoaded",(e)=>{
 
     const $body = document.getElementById('cuerpo'),
-    $dataDark = document.querySelectorAll("[data-dark]"),
-    $icono = document.getElementById('oscuro');
+        $dataDark = document.querySelectorAll("[data-dark]"),
+        $icono = document.getElementById('oscuro');
+
+    let moon = "🌙",
+        sun = "☀";
 
     const darkMode = () =>{
         $body.classList.add('oscuro-body');
