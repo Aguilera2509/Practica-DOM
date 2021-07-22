@@ -70,6 +70,8 @@ document.addEventListener("click",(e) =>{
 
 })
 
+
+/*------------------------- GUARDADO DE MODO OSCURO --------------------------*/
 document.addEventListener("DOMContentLoaded",(e)=>{
 
     const $body = document.getElementById('cuerpo'),
