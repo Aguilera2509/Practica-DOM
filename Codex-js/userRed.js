@@ -1,4 +1,4 @@
-document.addEventListener("offline", (e)=>{
+window.addEventListener("offline", (e)=>{
     
     swal({
         icon: 'error',
@@ -8,7 +8,7 @@ document.addEventListener("offline", (e)=>{
 
 })
 
-document.addEventListener("online", (e)=>{
+window.addEventListener("online", (e)=>{
     
     swal({
         icon: 'success',

@@ -25,9 +25,3 @@ window.addEventListener("DOMContentLoaded",(e)=>{
 tamanio();
     
 })
-
-window.addEventListener("resize", (e)=>{
-
-window.onresize=tamanio;
-
-})
