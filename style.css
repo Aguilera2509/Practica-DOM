@@ -6,11 +6,12 @@
 .titulo{
   background-color: var(--bs-yellow);
 
-  position: absolute;
+  position: fixed;
   top: 0%;
   left: 0%;
   right: 0%;
   padding: 6px;
+  z-index: 998;
 
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -26,7 +27,7 @@
 
 .body-pages{
   padding: 2rem;
-  padding-top: 4rem;
+  padding-top: 6rem;
   position: relative;
   top: 120px;
   max-width: 1200px;
@@ -144,7 +145,8 @@
   right: 0;
   left: 0;
   transform: translate(0,-200%);
-  transition: transform 0.6s ease;
+  transition: transform 0.9s ease;
+  overflow-y: scroll;
 }
 .panel.is-active{
   transform: translate(0,0);

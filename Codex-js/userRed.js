@@ -2,7 +2,7 @@ window.addEventListener("offline", (e)=>{
     
     swal({
         icon: 'error',
-        text: 'Ha perdido la conección',
+        title: 'Se ha perdido la conexión',
         closeOnClickOutside: false
     });
 
@@ -12,7 +12,7 @@ window.addEventListener("online", (e)=>{
     
     swal({
         icon: 'success',
-        text: 'Conexión Estable',
+        title: 'Se ha reestablecido la conexión',
         closeOnClickOutside: false
     });
 
