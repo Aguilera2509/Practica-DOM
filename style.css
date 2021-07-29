@@ -237,3 +237,10 @@ input[type=number] { -moz-appearance:textfield; }
   visibility: hidden;
   order: 1;
 }
+
+
+/* -------------------- Formulario ------------------- */
+
+.resize{
+  resize: none;
+}

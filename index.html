@@ -19,6 +19,9 @@
     <script src="Codex-js/UserWebCam.js"></script>
     <script src="Codex-js/geolocalizacion.js"></script>
     <script src="Codex-js/FiltroBusqueda.js"></script>
+    <script src="Codex-js/sorteo.js"></script>
+    <script src="Codex-js/video_inteligente.js"></script>
+    <script src="Codex-js/formulario.js"></script>
     
     
     <!--Vinculo de Bootstrap, hoja de estilo e ícono-->
@@ -157,29 +160,64 @@
     <section  id="seccion-11" class="body-pages">
         <h2 data-dark>Sorteo Digital</h2>
 
+        <ul class="players">
+            <li class="player" data-dark>JavaScript</li>
+            <li class="player" data-dark>Python</li>
+            <li class="player" data-dark>Go</li>
+            <li class="player" data-dark>PHP</li>
+            <li class="player" data-dark>Java</li>
+            <li class="player" data-dark>Rust</li>
+            <li class="player" data-dark>Ruby</li>
+            <li class="player" data-dark>C#</li>
+            <li class="player" data-dark>C++</li>
+            <li class="player" data-dark>Perl</li>
+        </ul>
+
+        <button id="winner-btn" class="btn btn-outline-primary">Obtener Ganador</button>
 
     </section>
 
     <section  id="seccion-12" class="body-pages">
-        <h2 data-dark>Seccion 12</h2>
+        <h2 data-dark>Video Inteligente</h2>
 
+        <video src="Sonido-Alarma/2020-12-28 16-09-58_Trim.mp4" muted controls width="1080px" height="720px" data-smart-video></video>
 
     </section>
 
     <section  id="seccion-13" class="body-pages">
-        <h2 data-dark>Seccion 13</h2>
+        <h2 data-dark>Formulario de Contacto (Validaciones)</h2>
 
+        <form>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" data-dark>Nombre</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ej: José Aguilera">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" data-dark>Direccion de Correo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" data-dark>Asunto</label>
+                <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Tema a tratar">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label" data-dark>Comentario</label>
+                <textarea class="form-control resize" id="exampleFormControlTextarea1" rows="3" placeholder="Tema"></textarea>
+            </div>
+
+            <input type="submit" value="Enviar" id="enviar-btn" class="btn btn-warning">
+            <input type="reset" value="Borrar" class="btn btn-warning">
+
+        </form>
 
     </section>
 
     <section  id="seccion-14" class="body-pages">
         <h2 data-dark>Seccion 14</h2>
-
-
-    </section>
-
-    <section  id="seccion-15" class="body-pages">
-        <h2 data-dark>Seccion 15</h2>
 
 
     </section>
@@ -211,10 +249,9 @@
           <a href="#seccion-9" data-link>Detección de la Geolocalización</a>
           <a href="#seccion-10" data-link>Filtro de Busqueda</a>
           <a href="#seccion-11" data-link>Sorteo Digital</a>
-          <a href="#seccion-12" data-link>seccion 12</a>
-          <a href="#seccion-13" data-link>seccion 13</a>
+          <a href="#seccion-12" data-link>Video Inteligente</a>
+          <a href="#seccion-13" data-link>Formulario de Contacto (Validaciones)</a>
           <a href="#seccion-14" data-link>seccion 14</a>
-          <a href="#seccion-15" data-link>seccion 15</a>
       </nav>
   </aside>
 
