@@ -1,19 +1,23 @@
 
 let validacionName = true,validacionAdress = true,validacionTitle = true,validacionComment = true;
 
+document.addEventListener("DOMContentLoaded", (e)=>{
+    document.getElementById('enviar-btn').disabled = true;
+})
 
 document.addEventListener("keyup", (e)=>{
-
+    
     const $name = document.getElementById('exampleFormControlInput1').value,
         $correo = document.getElementById('exampleFormControlInput2').value,
         $titulo = document.getElementById('exampleFormControlInput3').value,
         $comentario = document.getElementById('exampleFormControlTextarea1').value;
-
+    
     let expresionName = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/, 
         expresionAdress = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i,
         expresionTitle = /^[\w'\-,.][^?÷?¿/\\+=@#$%ˆ*(){}|~<>;:[\]]{2,}$/,
         expresionComment = /^[\w'\-,.][^÷\ˆ]{2,300}$/;
-    
+
+    document.getElementById('enviar-btn').disabled = false;
 
     if(expresionName.test($name) === false){
         validacionName = false;
