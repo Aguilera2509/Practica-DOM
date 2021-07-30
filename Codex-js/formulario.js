@@ -23,6 +23,7 @@ document.addEventListener("keyup", (e)=>{
         validacionName = false;
         document.getElementById('exampleFormControlInput1').style.border = 'red solid 2px';
     }else{
+        validacionName = true;
         document.getElementById('exampleFormControlInput1').style.border = 'green solid 2px';
     }
 
@@ -31,6 +32,7 @@ document.addEventListener("keyup", (e)=>{
         validacionAdress= false;
         document.getElementById('exampleFormControlInput2').style.border = 'red solid 2px';
     }else{
+        validacionAdress = true;
         document.getElementById('exampleFormControlInput2').style.border = 'green solid 2px';
     }
 
@@ -39,14 +41,16 @@ document.addEventListener("keyup", (e)=>{
         validacionTitle = false;
         document.getElementById('exampleFormControlInput3').style.border = 'red solid 2px';
     }else{
+        validacionTitle = true;
         document.getElementById('exampleFormControlInput3').style.border = 'green solid 2px';
     }
         
 
     if(expresionComment.test($comentario) === false){
-        validacionComment = false
+        validacionComment = false;
         document.getElementById('exampleFormControlTextarea1').style.border = 'red solid 2px';
     }else{
+        validacionComment = true;
         document.getElementById('exampleFormControlTextarea1').style.border = 'green solid 2px';   
     }
 
@@ -58,8 +62,19 @@ document.addEventListener("click", (e)=>{
 
         if((validacionName === true) && (validacionAdress === true) && (validacionTitle === true) && (validacionComment === true)){
             alert("Hola. falta más, esta en construcción, como tu vida, animo, crack : D");
+
+            validacionName = false;
+            validacionAdress = false;
+            validacionTitle = false;
+            validacionComment = false;
+
+            document.getElementById('exampleFormControlInput1').style.border = '';
+            document.getElementById('exampleFormControlInput2').style.border = '';
+            document.getElementById('exampleFormControlInput3').style.border = '';
+            document.getElementById('exampleFormControlTextarea1').style.border = '';   
+
         }else{
-            alert("Las que están en rojo estan mal, tienen que estar todsa en verde, todas son requeridas");
+            alert("No ha sido aprobada su solicitud");
         }
     }
 

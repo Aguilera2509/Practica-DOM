@@ -244,3 +244,10 @@ input[type=number] { -moz-appearance:textfield; }
 .resize{
   resize: none;
 }
+
+@media screen and (max-width: 660px){
+
+.body-pages{
+  padding-top: 10rem;
+}
+}
