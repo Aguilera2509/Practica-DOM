@@ -56,26 +56,37 @@ document.addEventListener("keyup", (e)=>{
 
 })
 
-document.addEventListener("click", (e)=>{
+document.addEventListener("submit", (e)=>{
 
-    if(e.target.matches('#enviar-btn')){
+    if((validacionName === true) && (validacionAdress === true) && (validacionTitle === true) && (validacionComment === true)){
+        const $form = document.getElementById('content-form'),
+            $nice = document.getElementById('nice'),
+            $loaded = document.getElementById('load');
 
-        if((validacionName === true) && (validacionAdress === true) && (validacionTitle === true) && (validacionComment === true)){
-            alert("Hola. falta más, esta en construcción, como tu vida, animo, crack : D");
+        $loaded.classList.remove('none');
+        alert("Hola. Falta más, esta en construcción como tu vida, animo, crack : D");
+        document.getElementById('enviar-btn').disabled = true;
 
-            validacionName = false;
-            validacionAdress = false;
-            validacionTitle = false;
-            validacionComment = false;
+        const $permiso = document.querySelectorAll('#content-form [required]');
+        
+        setTimeout(()=>{
+            $permiso.forEach((el) => el.disabled=true); 
+        },10);
+        
+        setTimeout(()=>{
+            $loaded.classList.add('none');
+            $nice.classList.remove('none');
+        
+            setTimeout(()=>{
+                $form.reset();
+                $nice.classList.add('none');
+                $permiso.forEach((el) => el.disabled=false);
+            },5000);
+            
+        },3000);
 
-            document.getElementById('exampleFormControlInput1').style.border = '';
-            document.getElementById('exampleFormControlInput2').style.border = '';
-            document.getElementById('exampleFormControlInput3').style.border = '';
-            document.getElementById('exampleFormControlTextarea1').style.border = '';   
-
-        }else{
-            alert("No ha sido aprobada su solicitud");
-        }
+    }else{
+        alert("No ha sido aprobada su solicitud");
     }
 
 })

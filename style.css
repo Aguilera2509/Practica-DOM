@@ -245,6 +245,17 @@ input[type=number] { -moz-appearance:textfield; }
   resize: none;
 }
 
+.block{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.none{
+  display: none;
+}
+
+
 @media screen and (max-width: 660px){
 
 .body-pages{

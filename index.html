@@ -187,30 +187,32 @@
     <section  id="seccion-13" class="body-pages">
         <h2 data-dark>Formulario de Contacto (Validaciones)</h2>
 
-        <form>
+        <form id="content-form" action="https://formsubmit.co/ja846699@gmail.com" method="POST" target="_blank">
 
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" data-dark>Nombre</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" required placeholder="Ej: José Aguilera">
+                <input type="text" class="form-control" name="name" id="exampleFormControlInput1" required placeholder="Ej: José Aguilera">
             </div>
 
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" data-dark>Direccion de Correo</label>
-                <input type="email" class="form-control" id="exampleFormControlInput2" required placeholder="name@example.com">
+                <input type="email" class="form-control" name="email" id="exampleFormControlInput2" required placeholder="name@example.com">
             </div>
 
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label" data-dark>Asunto</label>
-                <input type="text" class="form-control" id="exampleFormControlInput3" required placeholder="Tema a tratar">
+                <input type="text" class="form-control" name="object" id="exampleFormControlInput3" required placeholder="Tema a tratar">
             </div>
 
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label" data-dark>Comentario</label>
-                <textarea class="form-control resize" id="exampleFormControlTextarea1" required rows="3" placeholder="Tema"></textarea>
+                <textarea class="form-control resize" name="comment" id="exampleFormControlTextarea1" required rows="3" placeholder="Tema"></textarea>
             </div>
-
+            
+            <img src="loaded/spinning-circles.svg" alt="Cargando" class="none block" id="load">
+            <p class="none block" id="nice" data-dark>Los datos han sido enviados correctamente, ahora espere 5 segundos</p>
+            
             <input type="submit" value="Enviar" id="enviar-btn" class="btn btn-warning">
-            <input type="reset" value="Borrar" class="btn btn-warning">
 
         </form>
 
