@@ -22,7 +22,7 @@
     <script src="Codex-js/sorteo.js"></script>
     <script src="Codex-js/video_inteligente.js"></script>
     <script src="Codex-js/formulario.js"></script>
-    
+    <script src="Codex-js/reader.js"></script>
     
     <!--Vinculo de Bootstrap, hoja de estilo e ícono-->
     <link rel="stylesheet" href="style.css">
@@ -105,7 +105,7 @@
     <section  id="seccion-8" class="body-pages">
         <h2 data-dark>Detección de la WebCam</h2>
 
-        <video src="" id="WebCam" autoplay="true"></video>
+        <video src="" id="WebCam" autoplay="true" width="90%" height="90%"></video>
     
     </section>
 
@@ -219,7 +219,20 @@
     </section>
 
     <section  id="seccion-14" class="body-pages">
-        <h2 data-dark>Seccion 14</h2>
+        <h2 data-dark>Narrador (Lector de Voz)</h2>
+
+        <select id="speech-select">
+            <option value="">--- Elige una voz ---</option>
+        </select>
+
+        <div class="mb-3">
+            <label class="form-label">Narrador</label>
+            <textarea class="form-control" id="leer" rows="3" placeholder="Ingrese texto a leer..."></textarea>
+        </div>
+
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-primary" type="button" id="voz-btn">leer Texto</button>
+        </div>
 
 
     </section>
@@ -253,7 +266,7 @@
           <a href="#seccion-11" data-link>Sorteo Digital</a>
           <a href="#seccion-12" data-link>Video Inteligente</a>
           <a href="#seccion-13" data-link>Formulario de Contacto (Validaciones)</a>
-          <a href="#seccion-14" data-link>seccion 14</a>
+          <a href="#seccion-14" data-link>Narrador (Lector de Voz)</a>
       </nav>
   </aside>
 
