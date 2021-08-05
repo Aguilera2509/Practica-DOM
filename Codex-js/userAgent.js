@@ -58,7 +58,11 @@ document.addEventListener("DOMContentLoaded",(e)=>{
                 rec.start();
                 document.getElementById('reconocimiento-voz-btn').disabled = true;
             }else{
-                alert("Lo siento si no estas en Chrome o safari o edge no se puede correr este código, el nagevador no lo soporta");
+                swal({
+                    icon: 'error',
+                    title: 'Insoportable',
+                    text: 'Lo siento si no estas en Chrome, Safari o Edge no se puede correr este código, el nagevador no lo soporta'
+                });
             }
     
         }
