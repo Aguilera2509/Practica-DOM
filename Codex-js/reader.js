@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", (e)=>{
 
         voices = speechSynthesis.getVoices();
 
-        console.log(voices);
-
         voices.forEach((voice) =>{
             const $option = document.createElement('option');
 
@@ -42,9 +40,11 @@ document.addEventListener("click",(e)=>{
         speechSynthesis.speak(new SpeechSynthesisUtterance($value_input));
 
         $btn.disabled = true;
+        document.getElementById('reconocimiento-voz-btn').disabled = true;
 
         setTimeout(()=>{
             $btn.disabled = false;
+            document.getElementById('reconocimiento-voz-btn').disabled = false;
         }, 3000);
     }
 

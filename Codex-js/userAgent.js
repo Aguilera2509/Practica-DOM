@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded",(e)=>{
     document.addEventListener("click", (e)=>{
     
         if(e.target.matches('#reconocimiento-voz-btn')){
-            
+  
             if((isBrowser.chrome()) || (isBrowser.safari()) || (isBrowser.edge())){
     
                 rec = new webkitSpeechRecognition();
@@ -54,9 +54,21 @@ document.addEventListener("DOMContentLoaded",(e)=>{
                 rec.continuous = true;
                 rec.interim = true;
                 rec.addEventListener("result", iniciar);
-    
-                rec.start();
-                document.getElementById('reconocimiento-voz-btn').disabled = true;
+
+                if(!(navigator.mediaDevices.getUserMedia)) return swal({title: 'error', text: 'No disponible'});
+
+                //CONTROLAR EL ERROR DEL MICROFONO DESACTIVADO. Activación manual del usuario..... 
+                navigator.mediaDevices.getUserMedia({audio: true}).then(()=>{
+                    rec.start();
+                    document.getElementById('reconocimiento-voz-btn').disabled = true;
+                    document.getElementById('voz-btn').disabled = true;
+                }).catch((err)=>{
+                    swal({
+                        icon: 'warning',
+                        title: 'Microfono desactivado',
+                        text: `Active el microfono. Error: ${err}`
+                    });
+                });
             }else{
                 swal({
                     icon: 'error',
@@ -77,4 +89,5 @@ function iniciar(event){
     }
     rec.stop();
     document.getElementById('reconocimiento-voz-btn').disabled = false;
+    document.getElementById('voz-btn').disabled = false;
 }

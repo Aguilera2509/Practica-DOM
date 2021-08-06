@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
             console.log(err);   
             $video.insertAdjacentHTML("beforebegin", `<h4 data-dark>Permiso bloqueado</h4>`);
         });
-
+        
     }
 
 })
